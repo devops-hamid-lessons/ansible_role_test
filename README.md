@@ -1,4 +1,4 @@
-# Web PaPa
+# How to use Ansible Roles
 
 This is an example Ansible project, demonstrating how to write and reuse ansible Roles.
 Inside `roles` folder there are two roles named `packageRemover` and `apacheInstaller`. There are called inside `test-role.yaml` file.
