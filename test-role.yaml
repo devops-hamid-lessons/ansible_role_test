@@ -1,0 +1,8 @@
+---
+- name: test role
+  hosts: servers
+  vars_files:
+    - vars
+  roles:
+    - ./packageRemover
+    - ./apacheInstaller

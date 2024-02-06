@@ -1,0 +1,32 @@
+# required variable list:
+# 1. package  # default value is nginx in the defaults folder
+
+- name: update apt repo and cache
+  apt:
+    update_cache: yes
+    force_apt_get: yes
+    cache_valid_time: 3600
+- name: get the list of installed packages
+  package_facts:
+    manager: "auto"
+- name: stop {{package}} service
+  service:
+    name: "{{package}}"
+    state: stopped
+  when: "'{{package}}' in ansible_facts.packages"
+- name: remove {{package}} if it is installed
+  apt:
+    name: "{{package}}*"
+    state: absent
+    purge: true
+    autoremove: true
+  when: "'{{package}}' in ansible_facts.packages"
+- name: check if {{package}} folder already exists
+  stat:
+    path: /etc/{{package}}
+  register: stat_result
+- name: delete /etc/{{package}} folder
+  file:
+    path: /etc/{{package}}
+    state: absent
+  when: stat_result.stat.exists

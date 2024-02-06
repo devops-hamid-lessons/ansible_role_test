@@ -1,0 +1,10 @@
+[servers]
+x.x.x.x   # ip address of server 1
+
+
+
+[servers:vars]
+ansible_ssh_private_key_file=/path/to/ssh/private/key
+# example: ansible_ssh_private_key_file=~/.ssh/id_rsa
+ansible_user=user_name
+# example: ansible_ssh_pass=pass
