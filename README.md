@@ -1,7 +1,7 @@
 # How to use Ansible Roles
 
 This is an example Ansible project, demonstrating how to write and reuse ansible Roles.
-Inside `roles` folder there are two roles named `packageRemover` and `apacheInstaller`. There are called inside `test-role.yaml` file.
+Inside `roles` folder there are two roles named `packageRemover` and `apacheInstaller`, which are called inside `test-role.yaml` file.
 - `packageRemover` is first used to remove any previous installation of `apache`. You can reuse it to remove any other package. To do so, inside `vars` file change the value of `package` var.
 - `apacheInstaller` is then used to install a fresh `apache`. 
 ## Requirement
