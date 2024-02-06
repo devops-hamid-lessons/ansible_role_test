@@ -14,7 +14,7 @@ Language            | Ansible
 
 ## How to use
 
-Install `ansible`, clone this project, and then Simply run:
+Install `ansible`, clone this project, and then simply run:
 
 ```bash
 ansible-playbook test-role.yaml
