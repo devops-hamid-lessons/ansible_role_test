@@ -9,7 +9,7 @@ Inside `roles` folder there are two roles named `packageRemover` and `apacheInst
 Requirement         | Specification
 ------------------- | ----------------------
 OS                  | Ubuntu 22.04
-Language            | bash
+Language            | Ansible
 
 
 ## How to use
